@@ -7,7 +7,7 @@ from scipy import spatial
 
 app = Flask(__name__,template_folder='web_pages')
 
-model = load_model('https://drive.google.com/file/d/1SJjb0cncNwrEiTxIDasTVTGZ_fhZh0L5/view?usp=sharing')
+model = load_model('word2vec_65_epochs.h5')
 model.pop()
 with open('text_to_seq.pkl', 'rb') as f:
     tokenizer = pickle.load(f)
